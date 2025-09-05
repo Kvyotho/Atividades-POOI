@@ -5,8 +5,8 @@ package com.mycompany.pooi.atvfix05;
 public class ContaBancaria {
     
     public String titular;
-    public double saldo;
-    public int numero;
+    private double saldo;
+    private int numero;
     
     public ContaBancaria(String titular, int saldo, int numero){
         this.titular = titular;
