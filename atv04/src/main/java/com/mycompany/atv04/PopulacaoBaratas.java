@@ -5,7 +5,7 @@ import java.util.Random;
 public class PopulacaoBaratas {
 
     Random rand = new Random();
-    double pop = rand.nextInt(1000);
+    int pop = rand.nextInt(1000);
     
     public void aumentaBaratas(){
     pop += (pop * 0.10);

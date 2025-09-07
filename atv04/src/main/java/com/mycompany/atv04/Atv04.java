@@ -18,5 +18,8 @@ public class Atv04 {
         pb1.getNumeroBaratas();
         pb1.spray();
         pb1.getNumeroBaratas();
+
+        Cozinha c1 = new Cozinha();
+        c1.simular();
     }
 }

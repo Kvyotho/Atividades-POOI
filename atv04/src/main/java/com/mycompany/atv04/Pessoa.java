@@ -22,7 +22,7 @@ public void info() {
 
 //Calcula a média das idades
 public void mediaIdades(){
-    int soma = 0;
+    double soma = 0;
     for (int i = 0; i < idades.length; i++){
         soma += idades[i];
     }
@@ -39,7 +39,7 @@ public void maiorIdade(){
     System.out.println("A maior idade é: "+maior);
 }
 public void menorIdade(){
-    int menor = 100;
+    int menor = idades[0];
     for (int i = 0; i < idades.length; i++){
         if (idades[i] < menor){
             menor = idades[i];
@@ -60,5 +60,4 @@ public void qntIdade(){
     System.out.println("A quantidade de maiores de idade é: "+qnt);
 }
 
-//arrays are very fun!
 }
