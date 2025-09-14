@@ -1,34 +1,28 @@
 package com.mycompany.pooi.atvfix05;
-import java.util.ArrayList;
-import java.util.Scanner;
 
+import java.util.ArrayList;
 
 public class Aluno {
 
     private String nome;
-    private int qtdProvas;
-    static ArrayList<Double> notas = new ArrayList<>();
+    private ArrayList<Double> notas = new ArrayList<>();
 
-    Scanner scanner = new Scanner(System.in);
-    public Aluno(String nome, int qtdProvas){
+    public Aluno(String nome, double nota1, double nota2, double nota3) {
         this.nome = nome;
-        this.qtdProvas = qtdProvas;
-        for (int i = 0; i < this.qtdProvas; i++){
-            System.out.printf("Digite a nota da %dº prova do aluno: %n", i+1);
-            notas.add(scanner.nextDouble());
-        }
-        
+        notas.add(nota1);
+        notas.add(nota2);
+        notas.add(nota3);
     }
 
-    public void calcMedia(){
-        int soma = 0;
-        for (int i = 0; i < notas.size(); i++){
+    public void calcMedia() {
+        double soma = 0;
+        for (int i = 0; i < notas.size(); i++) {
             soma += notas.get(i);
         }
         double media = soma / notas.size();
-        if (media >= 7){
+        if (media >= 7) {
             System.out.printf("O aluno %s passou de ano.%n", nome);
-        }else{
+        } else {
             System.out.printf("O aluno %s não passou de ano.%n", nome);
         }
     }
